@@ -4,7 +4,7 @@ import { useEffect, useRef } from 'react';
 import { TextureLoader } from 'three/src/loaders/TextureLoader';
 
 export default function App() {
-  const colorMap = useLoader(TextureLoader, '/src/assets/img.jpg');
+  const colorMap = useLoader(TextureLoader, new URL('/src/assets/img.jpg', import.meta.url).href);
   const ref = useRef(null);
 
   useEffect(() => {}, []);
